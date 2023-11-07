@@ -1,0 +1,9 @@
+.active {
+  color: rgb(178, 7, 127);
+}
+
+.custom-sticky-nav{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}

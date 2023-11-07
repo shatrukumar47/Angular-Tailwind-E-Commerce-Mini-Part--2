@@ -1,0 +1,22 @@
+<div class="min-h-screen mt-5 mb-5 w-4/5 mx-auto">
+  <div id="filtering" class="flex gap-4 mb-5 mt-10">
+    <select id="sort-by-price" class="border-blue-600 text-blue-600" [(ngModel)]="sortBy" (change) = "sortByPrice()">
+      <option value="">Sort by price</option>
+      <option value="desc">High to Low</option>
+      <option value="asc">Low to High</option>
+    </select>
+    <select id="filter-by-category" class="border-green-600 text-green-600" [(ngModel)]="filterBy" (change)="filterByCategory()" >
+      <option value="">Filter by cateogry</option>
+      <option value="men's clothing">Men Clothing</option>
+      <option value="women's clothing">Women Clothing</option>
+      <option value="electronics">Electronics</option>
+      <option value="jewelery">Jewellery</option>
+    </select>
+  </div>
+  <div
+    id="product-list-container"
+    class="grid grid-cols-4 gap-5"
+  >
+    <app-card *ngFor="let item of products" [item]="item"> </app-card>
+  </div>
+</div>
